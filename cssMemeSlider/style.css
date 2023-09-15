@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    display: grid;
+    justify-content: center;
+}
+
+* {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 300px 50px;
+    grid-template-areas: 
+        "carousel carousel"
+        "title about_ellipse"        
+    ;
+    width: 100%;
+    max-width: 1024px;
+    background-color: rgb(52, 49, 49);
+    padding-top: 1rem;
+    padding-bottom: 1rem;  
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    grid-area: carousel;
+}
+[data-slides] {
+    margin: 0 15px 0 15px;
+    column-gap: 25px;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        'data-active'
+    ;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    display: none;
+
+}
+
+img {
+    display: block;    
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+    max-width: 600px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.slide[data-active] { 
+    display: block;    
+    opacity: 1;
+    z-index: 2;
+    transition-delay: 0ms;
+    position: relative;
+    grid-area: data-active;
+
+    animation-name: animeSlide;
+    animation-duration: 2s;
+
+    @keyframes animeSlide {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+}
+
+.about_ellipse {
+    grid-area: about_ellipse;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    justify-content: end;
+    align-items: center;
+    column-gap: 10px;
+    margin-right: 15px;
+    z-index: 2;
+}
+
+.slides_ellipse {
+    width: 16px;
+    height: 16px;
+    background-color: rgb(85, 157, 246);
+    border-radius: 50px;
+    cursor: pointer;    
+}
+
+.slides_ellipse[data-active] {    
+    background-color: rgb(52, 49, 49);
+    width: 14.5px;
+    height: 14.5px;
+    border: 2px solid rgb(85, 157, 246);
+    
+}
+
+.title {
+    grid-area: title;
+    align-self: center;
+    margin-left: 15px;
+    color: antiquewhite;
+}
+
+@media screen and (max-width:400px) {
+    .wrapper {
+        grid-template-rows: 300px 50px 50px;
+        grid-template-areas: 
+            "carousel carousel"
+            "about_ellipse about_ellipse"        
+            "title title"
+        ;
+    }
+
+    .about_ellipse {
+        justify-content: center;
+        margin-right: 0;
+    }
+}

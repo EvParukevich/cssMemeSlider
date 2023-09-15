@@ -3,11 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet/less" type="text/css" href="./style.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />    
     <title>cssMemeSlider</title>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="carousel" data-carousel>
+            <ul data-slides>
+                <li class="slide" data-left>                        
+                    <img src="./images/image_1.jpg" alt="mem_story1" class="">                
+                </li>
+                <li class="slide" data-active>                        
+                    <img src="./images/image_2.jpg" alt="mem_story2" class="">                
+                </li>
+                <li class="slide" data-right>                        
+                    <img src="./images/image_3.jpg" alt="mem_story3" class="">                
+                </li>
+                <li class="slide" >                        
+                    <img src="./images/image_4.jpg" alt="mem_story4" class="">                
+                </li>
+                <li class="slide" >                        
+                    <img src="./images/image_5.jpg" alt="mem_story5" class="">                
+                </li>
+                <li class="slide" >                        
+                    <img src="./images/image_6.jpg" alt="mem_story6" class="">                
+                </li>
+                <li class="slide" >                        
+                    <img src="./images/image_7.jpg" alt="mem_story7" class="">                
+                </li>
+                <li class="slide" >                        
+                    <img src="./images/image_8.jpg" alt="mem_story8" class="">                
+                </li>
+            </ul>
+        </div> 
+        <div class="about_ellipse">
+            <span class="slides_ellipse"></span>
+            <span class="slides_ellipse" data-active></span>
+            <span class="slides_ellipse"></span>
+            <span class="slides_ellipse"></span>
+            <span class="slides_ellipse"></span>
+            <span class="slides_ellipse"></span>
+            <span class="slides_ellipse"></span>
+            <span class="slides_ellipse"></span>
+        </div>
+        <p class="title">2</p>  
+    </div>      
     <script async src="./index.js"></script>
 </body>
 </html>
