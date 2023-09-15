@@ -40,32 +40,48 @@ document.querySelectorAll('.slides_ellipse').forEach((ellipse, index) => {
 			delete rightSlide.dataset.right
 
 			if (index === 0) {
-				title.textContent = '1';				
+				delete title.dataset.active
+				title.dataset.active = true;				
+				title.textContent = '1';
 			} else 
 			
 			if (index === 1) {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '2'
 			}  else 
 
 			if (index === 2) {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '3'
 			}  else 
 
 			if (index === 3) {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '4'
 			}  else 
 
 			if (index === 4) {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '5'
 			}  else 
 
 			if (index === 5) {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '6'
 			}  else 
 
 			if (index === 6) {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '7'
 			}  else {
+				delete title.dataset.active
+				title.dataset.active = true;
 				title.textContent = '8'
 			}
 

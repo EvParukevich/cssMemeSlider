@@ -77,11 +77,17 @@ img {
     grid-area: data-active;
 
     animation-name: animeSlide;
-    animation-duration: 2s;
+    animation-duration: 2s;   
+}
 
-    @keyframes animeSlide {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
+@keyframes animeSlide {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
     }
 }
 
@@ -104,6 +110,10 @@ img {
     cursor: pointer;    
 }
 
+.slides_ellipse:hover {
+    background-color: antiquewhite;
+}
+
 .slides_ellipse[data-active] {    
     background-color: rgb(52, 49, 49);
     width: 14.5px;
@@ -112,11 +122,31 @@ img {
     
 }
 
+.slides_ellipse[data-active]:hover {
+    border-color: antiquewhite;
+}
+
 .title {
     grid-area: title;
     align-self: center;
     margin-left: 15px;
     color: antiquewhite;
+}
+
+.title[data-active] {
+    animation-name: animeTitle;
+    animation-duration: 2s;
+}
+
+@keyframes animeTitle {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
 }
 
 @media screen and (max-width:400px) {
