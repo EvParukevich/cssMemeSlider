@@ -10,6 +10,9 @@ const getIndex = (slides, activeSlide, offset) => {
     if (newIndex >= slides.children.length) newIndex = newIndex - slides.children.length
 	return newIndex;
 };
+const deleteActive = () => {
+	delete title.dataset.active
+}
 
 document.querySelectorAll('.slides_ellipse').forEach((ellipse, index) => {
   
@@ -39,51 +42,39 @@ document.querySelectorAll('.slides_ellipse').forEach((ellipse, index) => {
 			slides.children[rightIndex].dataset.right = true
 			delete rightSlide.dataset.right
 
-			if (index === 0) {
-				delete title.dataset.active
-				title.dataset.active = true;				
-				title.textContent = '1';
+			if (index === 0) {							
+				title.textContent = '1';				
 			} else 
 			
-			if (index === 1) {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '2'
+			if (index === 1) {				
+				title.textContent = '2'				
 			}  else 
 
-			if (index === 2) {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '3'
+			if (index === 2) {				
+				title.textContent = '3'				
 			}  else 
 
-			if (index === 3) {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '4'
+			if (index === 3) {				
+				title.textContent = '4'				
 			}  else 
 
 			if (index === 4) {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '5'
+				title.textContent = '5'				
 			}  else 
 
-			if (index === 5) {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '6'
+			if (index === 5) {				
+				title.textContent = '6'				
 			}  else 
 
-			if (index === 6) {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '7'
-			}  else {
-				delete title.dataset.active
-				title.dataset.active = true;
-				title.textContent = '8'
+			if (index === 6) {				
+				title.textContent = '7'				
+			}  else {				
+				title.textContent = '8'				
 			}
+
+			title.dataset.active = true;
+
+			setTimeout(deleteActive, 1000);
 
 		}		
 
