@@ -34,9 +34,7 @@ li {
     text-decoration: none;
  }
  #slides {
-    padding: 10px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
+    padding: 5px;    
     background: #444;
     position: relative;
     z-index: 1;
@@ -71,29 +69,29 @@ li {
     justify-content: flex-start;
     align-items: flex-end;
     height: 100%;
-    color: #fff;
+    border-radius: 10px;
  }
  #slides .slide_1 {
     background: #0b5972;
-    background-image: url('./images/image_1.jpg');
+    background-image: url('./images/image_5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
  }
  #slides .slide_2 {
     background: #003459;
-    background-image: url('./images/image_2.jpg');
+    background-image: url('./images/image_6.jpg');
     background-repeat: no-repeat;
     background-size: cover;
  }
  #slides .slide_3 {
     background: #007EA7;
-    background-image: url('./images/image_3.jpg');
+    background-image: url('./images/image_7.jpg');
     background-repeat: no-repeat;
     background-size: cover;
  }
  #slides .slide_4 {
     background: #00A8E8;
-    background-image: url('./images/image_4.jpg');
+    background-image: url('./images/image_8.jpg');
     background-repeat: no-repeat;
     background-size: cover;
  }
@@ -112,6 +110,9 @@ li {
     border-radius:100%;
     background: rgb(120, 161, 208);
     margin: 0 10px;
+ }
+ #bullets label:hover {
+    background-color: #ccc;
  }
  #slide1:checked ~ #bullets label:nth-child(1),
  #slide2:checked ~ #bullets label:nth-child(2),
