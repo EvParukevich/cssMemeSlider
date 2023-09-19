@@ -7,47 +7,57 @@
     <title>cssMemeSlider</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="carousel" data-carousel>
-            <ul data-slides>
-                <li class="slide" data-left>                        
-                    <img src="./images/image_1.jpg" alt="mem_story1" >                
-                </li>
-                <li class="slide" data-active>                        
-                    <img src="./images/image_2.jpg" alt="mem_story2">                
-                </li>
-                <li class="slide" data-right>                        
-                    <img src="./images/image_3.jpg" alt="mem_story3">                
-                </li>
-                <li class="slide" >                        
-                    <img src="./images/image_4.jpg" alt="mem_story4">                
-                </li>
-                <li class="slide" >                        
-                    <img src="./images/image_5.jpg" alt="mem_story5">                
-                </li>
-                <li class="slide" >                        
-                    <img src="./images/image_6.jpg" alt="mem_story6">                
-                </li>
-                <li class="slide" >                        
-                    <img src="./images/image_7.jpg" alt="mem_story7">                
-                </li>
-                <li class="slide" >                        
-                    <img src="./images/image_8.jpg" alt="mem_story8">                
-                </li>
-            </ul>
-        </div> 
-        <div class="about_ellipse">
-            <span class="slides_ellipse"></span>
-            <span class="slides_ellipse" data-active></span>
-            <span class="slides_ellipse"></span>
-            <span class="slides_ellipse"></span>
-            <span class="slides_ellipse"></span>
-            <span class="slides_ellipse"></span>
-            <span class="slides_ellipse"></span>
-            <span class="slides_ellipse"></span>
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div class="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                 </div>
+                 <div class="slide slide_2">
+                 </div>
+                 <div class="slide slide_3">
+                 </div>
+                 <div class="slide slide_4">
+                 </div>
+              </div>
+           </div>
         </div>
-        <p class="title">2</p>  
-    </div>      
-    <script async src="./index.js"></script>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div class="slides-content">
+            <div class="overflow">
+                <div class="inner">
+                   <div class="slide slide_1">
+                      <div class="slide-content">                         
+                         <p>Content for Slide 1</p>
+                      </div>
+                   </div>
+                   <div class="slide slide_2">
+                      <div class="slide-content">                         
+                         <p>Content for Slide 2</p>
+                      </div>
+                   </div>
+                   <div class="slide slide_3">
+                      <div class="slide-content">                         
+                         <p>Content for Slide 3</p>
+                      </div>
+                   </div>
+                   <div class="slide slide_4">
+                      <div class="slide-content">                         
+                         <p>Content for Slide 4</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+        </div>
+     </div>
 </body>
 </html>
