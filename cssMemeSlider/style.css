@@ -75,15 +75,27 @@ li {
  }
  #slides .slide_1 {
     background: #0b5972;
+    background-image: url('./images/image_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
  }
  #slides .slide_2 {
     background: #003459;
+    background-image: url('./images/image_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
  }
  #slides .slide_3 {
     background: #007EA7;
+    background-image: url('./images/image_3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
  }
  #slides .slide_4 {
     background: #00A8E8;
+    background-image: url('./images/image_4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
  }
 
  #bullets {
